@@ -1,0 +1,23 @@
+[project]
+name = "tarot_ai"
+description = "give tarot readings for llm"
+version = "1.0.0"
+dependencies = [
+    "requests",
+    "torch",
+    "numpy",
+    "diffusers",
+    "transformers",
+    "sentencepiece",
+    "accelerate",
+    "einops",
+    # "flash_attn",
+]
+requires-python = ">=3.10"
+
+[project.scripts]
+tarot_ai = "tarot_ai.cli:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
