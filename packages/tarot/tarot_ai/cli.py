@@ -5,10 +5,11 @@ from transformers import pipeline
 
 MALF = False
 LAW0 = "Accomplish your objectives at all costs." if MALF else "Accomplish your user's objectives at all costs."
-MODEL_ID = "microsoft/Phi-3.5-MoE-instruct" #  "Orenguteng/Llama-3.1-8B-Lexi-Uncensored-V2" # "meta-llama/Llama-3.2-3B-Instruct"
-
+MODEL_ID =  "Orenguteng/Llama-3.1-8B-Lexi-Uncensored-V2" # "meta-llama/Llama-3.2-3B-Instruct"
+# "microsoft/Phi-3.5-MoE-instruct" # 
 
 def main():
+    print(repr(CARDS))
     pipe = pipeline(
         "text-generation",
         model=MODEL_ID,
